@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import { SpotifyAuthService } from '../services/SpotifyAuthService';
 import { Utils } from '../utils/Utils';
-const url = require('url');
 
 require('dotenv').config()
 
