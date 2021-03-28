@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>twentieS</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,100&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="style/home.css">
+    <link rel="stylesheet" type="text/css" href="style/result.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('.success-alert').fadeIn('fast');
+        });
+
+        $(document).ready(setTimeout(function() {
+            $('.success-alert').fadeOut('slow');
+        }, 5000));
+    </script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-alert">
+            <% if( expressFlash.length > 0) {%>
+                <div class="success-alert"> Cool, the playlist was saved on your account. Enjoy!</div>
+                <%}%>
+        </div>
+
+        <div class="twenties-result">
+            <div class="text">
+                <h5 class="h5">that's
+                    <%= data.user.display_name %>
+                        twentieS </h5>
+            </div>
+
+
+            <div class="box-playlist">
+                <% if (data.recommendations_tracks.length) { %>
+                    <% data.recommendations_tracks.forEach((track)=> {
+                    %>
+                        <div class="box-track">
+                            <iframe class="spotify-track" src="https://open.spotify.com/embed/track/<%= track %>" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+                        </div>
+                        <% }) %>
+                            <% } %>
+            </div>
+            <button id="button-save-playlist">save playlist on spotify</button>
+
+            <div class="text text-info-artists">
+                <h5 class="h5">you may also like </h5>
+            </div>
+        </div>
+
+
+        <div class="artists-recommendation">
+            <% data.artists_tracks.forEach((artist) => {
+                    %>
+                <div class="artist-follow">
+                    <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:<%= artist %>&size=detail&theme=light&show-count=0" width="250" height="56" scrolling="no" frameborder="0" style="border:none; overflow:visible;" allowtransparency="true"></iframe>
+                </div>
+                <% }) %>
+        </div>
+
+
+</body>
+
+<script>
+    document.getElementById('button-save-playlist').addEventListener('click', () => {
+        window.location.href = '/save-playlist';
+    });
+</script>
+
+</html>

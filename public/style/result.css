@@ -1,0 +1,84 @@
+.container {
+    margin: 2% auto 0 auto;
+    width: 100%;
+}
+
+.box-playlist {
+    width: 320px;
+    height: 300px;
+    padding: 0.2em;
+    overflow: auto;
+    background-color: var(--text-color);
+    border-radius: 8px;
+}
+
+.box-track {
+    width: 300px;
+    height: 80px;
+    padding: 0.1em;
+}
+
+h5:hover {
+    color: var(--spotify-green);
+    cursor: default;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+ ::-webkit-scrollbar-track {
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(187, 187, 187);
+    border-radius: 8px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: white;
+    transition: 0.10s;
+}
+
+.spotify-track {
+    border-radius: 8px;
+}
+
+.artist-follow {
+    display: inline-block;
+}
+
+.artists-recommendation-container {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-info-artists {
+    margin: 0 auto;
+}
+
+.twenties-result {
+    margin: 0 auto 2% auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.artists-recommendation {
+    margin: 0 auto 0 auto;
+}
+
+.success-alert {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: whitesmoke;
+    background-color: var(--spotify-green);
+    text-align: center;
+    font-family: var(--font-family);
+    opacity: 75%;
+    box-shadow: 0 5px 6px 0 rgba(114, 114, 114, 0.336);
+    margin: 0 0 0 0;
+}
