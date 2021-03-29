@@ -35,13 +35,13 @@
 
 The project is using the following tools:
 
-- dotENV
-
-- ejs
+- spotify-web-api
 
 - express
 
-- spotify-web-api
+- ejs
+
+- dotENV 
 
 - ts-node
 
