@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" type="text/css" href="style/home.css">
     <link rel="stylesheet" type="text/css" href="style/result.css">
+    <link rel="shortcut icon" href="icons/favicon.ico">
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,8 +40,24 @@
                 <h5 class="h5">that's
                     <%= data.user.display_name %>
                         twentieS </h5>
-            </div>
 
+                <span class="info-box-tracks"> <p style="font-weight: bold;"> your favorite songs have been:</p>
+                    <% data.topTracks.forEach((track)=> {
+                        %>
+                <p>
+                   <a href="<%= track.uri%>" target="_blank"> 
+                       <span style="font-weight: bold;"><%= track.name %></span>
+                </a>
+                by
+                <a href="<%= track.artists[0].uri%>" target="_blank">
+                    <span style="font-weight: bold;"><%= track.artists[0].name %></span>
+                </a>
+                </p>
+
+                <% }) %>
+                    </span>
+
+            </div>
 
             <div class="box-playlist">
                 <% if (data.recommendations_tracks.length) { %>
@@ -56,6 +73,7 @@
 
             <div class="text text-info-artists">
                 <h5 class="h5">you may also like </h5>
+
             </div>
         </div>
 
