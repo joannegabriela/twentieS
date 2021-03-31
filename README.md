@@ -7,9 +7,9 @@
 
 <h1  align="center">twentieS</h1>
 
-<h5  align="center"> status: in production</h5>
+<h5  align="center"> status: <span style="font-weight=bold"> not </span> finished </h5>
 
-<p  align="center"> twentieS is a playlist generator for spotify. based on your 5 most listened tracks, it gives you a brand new list of 20 songs you may like. it also recommends you a few artists who are related to your most listened ones. </p>
+<p  align="center"> twentieS is a simple playlist generator for spotify. based on your 5 most listened tracks, it gives you a brand new list of 20 songs you may like. it also recommends you a few artists who are related to your most listened ones. </p>
 
   
 
@@ -35,13 +35,13 @@
 
 The project is using the following tools:
 
-- dotENV
-
-- ejs
+- spotify-web-api
 
 - express
 
-- spotify-web-api
+- ejs
+
+- dotENV 
 
 - ts-node
 
@@ -53,7 +53,7 @@ The project is using the following tools:
 
   
 
-This project is under the [MIT] license (./LICENSE).
+This project is under the [MIT](./LICENSE) license .
 
   
 
