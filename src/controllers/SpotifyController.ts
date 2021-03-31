@@ -54,9 +54,10 @@ async function callback(req: Request, res: Response) {
   topTracks.body.items.forEach((played) => {
     tracksID.push(played.id);
   })
-
+  
   topArtists.body.items.forEach(async (artist) => {
-    related_artists.push((await spotify.getSpotifyApi().getArtistRelatedArtists(`${artist.id}`)).body.artists[0].id)
+    const related = (await spotify.getSpotifyApi().getArtistRelatedArtists(`${artist.id}`)).body.artists;
+    related_artists.push(related[Math.floor(Math.random() * related.length)].id)
   })
 
   const spotify_recommendations_tracks = await spotify.getSpotifyApi().getRecommendations({
