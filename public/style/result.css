@@ -15,6 +15,16 @@
     z-index: 0;
 }
 
+.box-track {
+    width: 300px;
+    height: 80px;
+    padding: 0.1em;
+}
+
+.spotify-track {
+    border-radius: 8px;
+}
+
 .info-box-tracks {
     font-family: var(--font-family);
     visibility: hidden;
@@ -32,11 +42,6 @@
     box-shadow: inset 0 0 1em var(--text-color), 0 0 1em rgba(114, 114, 114, 0.336);
 }
 
-.box-track {
-    width: 300px;
-    height: 80px;
-    padding: 0.1em;
-}
 
 h5:hover {
     color: var(--spotify-green);
@@ -47,14 +52,15 @@ h5:hover {
     visibility: visible;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
-}
-
 a {
     text-decoration: none;
     color: black;
+}
+
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -72,9 +78,6 @@ a {
     transition: 0.1s;
 }
 
-.spotify-track {
-    border-radius: 8px;
-}
 
 .artist-follow {
     display: inline-block;
